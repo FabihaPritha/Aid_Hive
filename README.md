@@ -1,66 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AidHive - Online Donation Platform for Charities</title>
+</head>
+<body>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h1>AidHive - Online Donation Platform for Charities</h1>
 
-## About Laravel
+<p>AidHive is a web-based donation management platform designed to facilitate donations for a single charity. The platform includes roles such as <strong>Donors</strong>, <strong>Program Coordinators</strong>, <strong>Accountants</strong>, and <strong>Top Management</strong>, each with specific access and functionality.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h2>Features</h2>
+<ul>
+    <li><strong>Donor Role</strong>: 
+        <ul>
+            <li>Donors can register, log in, and donate to specific events.</li>
+            <li>View donation history and track how their contributions are used.</li>
+        </ul>
+    </li>
+    <li><strong>Program Coordinator</strong>: 
+        <ul>
+            <li>Manage charity programs and events.</li>
+        </ul>
+    </li>
+    <li><strong>Accountant</strong>:
+        <ul>
+            <li>Manage donations and generate financial reports.</li>
+        </ul>
+    </li>
+    <li><strong>Top Management</strong>:
+        <ul>
+            <li>Oversee the entire system and manage users.</li>
+        </ul>
+    </li>
+</ul>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h2>Technologies Used</h2>
+<ul>
+    <li><strong>Frontend</strong>: HTML, CSS, Bootstrap 5, Tailwind CSS, JavaScript</li>
+    <li><strong>Backend</strong>: Laravel 10</li>
+    <li><strong>Database</strong>: MySQL</li>
+    <li><strong>Authentication</strong>: Laravel Breeze (authentication and role management)</li>
+</ul>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h2>Installation</h2>
+<h3>Prerequisites</h3>
+<ul>
+    <li>PHP >= 8.1</li>
+    <li>Composer</li>
+    <li>MySQL</li>
+    <li>Node.js and NPM (for frontend development)</li>
+</ul>
 
-## Learning Laravel
+<h3>Steps to Install</h3>
+<ol>
+    <li>Clone the repository:
+        <pre><code>git clone https://github.com/yourusername/aidhive.git</code></pre>
+    </li>
+    <li>Navigate into the project folder:
+        <pre><code>cd aidhive</code></pre>
+    </li>
+    <li>Install Composer dependencies:
+        <pre><code>composer install</code></pre>
+    </li>
+    <li>Install Node.js dependencies:
+        <pre><code>npm install</code></pre>
+    </li>
+    <li>Create a .env file by duplicating .env.example:
+        <pre><code>cp .env.example .env</code></pre>
+    </li>
+    <li>Set up your database credentials in the .env file.</li>
+    <li>Generate the application key:
+        <pre><code>php artisan key:generate</code></pre>
+    </li>
+    <li>Run the migrations to set up the database tables:
+        <pre><code>php artisan migrate</code></pre>
+    </li>
+    <li>Seed the database (optional):
+        <pre><code>php artisan db:seed</code></pre>
+    </li>
+    <li>Compile assets (optional but recommended for production):
+        <pre><code>npm run dev</code></pre>
+    </li>
+    <li>Start the development server:
+        <pre><code>php artisan serve</code></pre>
+    </li>
+</ol>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p>Now you can access the application by visiting <strong>http://127.0.0.1:8000</strong> in your browser.</p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<h2>Directory Structure</h2>
+<pre><code>
+.
+├── app/                    # Contains the core application logic (Controllers, Models, etc.)
+├── resources/               # Contains views, assets (CSS, JS), and localization files
+│   ├── views/               # Blade files for frontend
+│   ├── css/                 # Stylesheets
+│   ├── js/                  # JavaScript files
+├── routes/                  # Web routes
+│   └── web.php              # Defines routes for the application
+├── database/                # Database migrations and seeders
+├── public/                  # Publicly accessible files (images, assets)
+├── .env                     # Environment variables
+├── composer.json            # Composer dependencies and settings
+└── package.json             # Node.js dependencies and settings
+</code></pre>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<h2>Roles and Permissions</h2>
 
-## Laravel Sponsors
+<h3>Donor</h3>
+<ul>
+    <li>Donors can register, log in, and donate to specific causes.</li>
+    <li>They can track their donation history and view how their funds are being used.</li>
+</ul>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<h3>Program Coordinator</h3>
+<ul>
+    <li>Can manage charity programs and campaigns.</li>
+    <li>Assign specific programs to donation sectors.</li>
+</ul>
 
-### Premium Partners
+<h3>Accountant</h3>
+<ul>
+    <li>Manages donations and tracks financial reports.</li>
+    <li>Can generate reports for auditing and tracking donations.</li>
+</ul>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+<h3>Top Management</h3>
+<ul>
+    <li>Oversees the entire donation platform.</li>
+    <li>Can manage users and overall system administration.</li>
+</ul>
 
-## Contributing
+<h2>Contributing</h2>
+<ol>
+    <li>Fork the repository.</li>
+    <li>Create a new branch (<code>git checkout -b feature-name</code>).</li>
+    <li>Commit your changes (<code>git commit -am 'Add new feature'</code>).</li>
+    <li>Push to the branch (<code>git push origin feature-name</code>).</li>
+    <li>Create a new Pull Request.</li>
+</ol>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<h2>License</h2>
+<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</body>
+</html>
