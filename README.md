@@ -56,10 +56,10 @@
 <h3>Steps to Install</h3>
 <ol>
     <li>Clone the repository:
-        <pre><code>git clone https://github.com/yourusername/aidhive.git</code></pre>
+        <pre><code>git clone https://github.com/FabihaPritha/Aid_Hive.git</code></pre>
     </li>
     <li>Navigate into the project folder:
-        <pre><code>cd aidhive</code></pre>
+        <pre><code>cd Aid_Hive</code></pre>
     </li>
     <li>Install Composer dependencies:
         <pre><code>composer install</code></pre>
@@ -143,7 +143,7 @@
 </ol>
 
 <h2>License</h2>
-<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<p>This project is implemented by <i>Nowshin Fabiha Ibant</i></p>
 
 </body>
 </html>
